@@ -1,9 +1,11 @@
 {
   "private": true,
   "scripts": {
+    "_build": "fable src/Fable.Node.fsproj out",
+    "_pretest": "fable tests/Tests.fsproj build/tests --commonjs",
     "build": "fable build.fsx --run",
     "sample-cluster": "fable-splitter samples/cluster -o build/cluster --commonjs --run --w",
-    "pretest": "fable-splitter tests/Tests.fsproj -o build/tests --commonjs",
+    "pretest": "fable-splitter tests/Tests.fsproj -o build/tests --commonjs --sourceMaps",
     "test": "mocha build/tests -t 10000"
   },
   "devDependencies": {

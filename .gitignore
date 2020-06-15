@@ -344,3 +344,4 @@ build\.fsx\.lock
 package-lock\.json
 
 test\.js
+out/
